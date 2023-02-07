@@ -23,6 +23,7 @@ Route::post('/providerapp', 'DefaultController@sendLinkProvider')->name('default
 Route::get('/terms', 'DefaultController@terms')->name('default.terms');
 Route::get('/privacy', 'DefaultController@privacy')->name('default.privacy');
 
+
 Route::get('login/{service}', 'Auth\LoginController@redirectToProvider');
 Route::get('login/{service}/callback', 'Auth\LoginController@handleProviderCallback');
 Auth::routes();
@@ -57,21 +58,21 @@ Route::get('firebase/sw-js', 'AppSettingController@initFirebase');
 
 Route::get('storage/app/public/{id}/{conversion}/{filename?}', 'UploadController@storage');
 Route::middleware('auth')->group(function () {
-    Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
-    Route::get('/home', 'DashboardController@index')->name('dashboard');
+Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
+Route::get('/home', 'DashboardController@index')->name('dashboard');
 
-    Route::post('uploads/store', 'UploadController@store')->name('medias.create');
-    Route::get('users/profile', 'UserController@profile')->name('users.profile');
-    Route::post('users/remove-media', 'UserController@removeMedia');
-    Route::resource('users', 'UserController');
-    Route::get('dashboard', 'DashboardController@index')->name('dashboard');
+Route::post('uploads/store', 'UploadController@store')->name('medias.create');
+Route::get('users/profile', 'UserController@profile')->name('users.profile');
+Route::post('users/remove-media', 'UserController@removeMedia');
+Route::resource('users', 'UserController');
+Route::get('dashboard', 'DashboardController@index')->name('dashboard');
 
-    Route::group(['middleware' => ['permission:medias']], function () {
-        Route::get('uploads/all/{collection?}', 'UploadController@all');
-        Route::get('uploads/collectionsNames', 'UploadController@collectionsNames');
-        Route::post('uploads/clear', 'UploadController@clear')->name('medias.delete');
-        Route::get('medias', 'UploadController@index')->name('medias');
-        Route::get('uploads/clear-all', 'UploadController@clearAll');
+Route::group(['middleware' => ['permission:medias']], function () {
+Route::get('uploads/all/{collection?}', 'UploadController@all');
+Route::get('uploads/collectionsNames', 'UploadController@collectionsNames');
+Route::post('uploads/clear', 'UploadController@clear')->name('medias.delete');
+Route::get('medias', 'UploadController@index')->name('medias');
+Route::get('uploads/clear-all', 'UploadController@clearAll');
     });
 
     Route::group(['middleware' => ['permission:permissions.index']], function () {
@@ -212,5 +213,10 @@ Route::middleware('auth')->group(function () {
 
     Route::get('track', 'EServiceController@trackClick');
     Route::get('track/{id}', 'EServiceController@trackClickByService');
+
+
+   // post routes
+   Route::get('post','PostController@index')->name('post');
+   Route::get('edit','PostController@edit')->name('edit');
 
 });

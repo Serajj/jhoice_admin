@@ -210,6 +210,30 @@
         </ul>
     </li>
 @endcan
+<li class="nav-item {{ Request::is('faqCategories*') || Request::is('faqs*') ? 'menu-open' : '' }}">
+    <a href="#" class="nav-link {{ Request::is('faqs*') || Request::is('faqCategories*') ? 'active' : '' }}"> @if($icons)
+            <i class="nav-icon fas fa-question-circle"></i>@endif
+        <p>{{trans('Post')}} <i class="right fas fa-angle-left"></i>
+        </p>
+    </a>
+    <ul class="nav nav-treeview">
+        @can('faqCategories.index')
+            <li class="nav-item">
+                <a class="nav-link {{ Request::is('faqCategories*') ? 'active' : '' }}" href="{!! route('faqCategories.index') !!}">@if($icons)
+                        <i class="nav-icon fas fa-folder-open"></i>@endif<p>{{trans('lang.faq_category_plural')}}</p></a>
+            </li>
+        @endcan
+
+        @can('faqs.index')
+            <li class="nav-item">
+                <a class="nav-link {{ Request::is('faqs*') ? 'active' : '' }}" href="{!! route('faqs.index') !!}">@if($icons)
+                        <i class="nav-icon fas fa-life-ring"></i>@endif
+                    <p>{{trans('lang.faq_plural')}}</p></a>
+            </li>
+        @endcan
+    </ul>
+</li>
+
 <li class="nav-header">{{trans('lang.payment_plural')}}</li>
 @can('payments.index')
     <li class="nav-item has-treeview {{ Request::is('payments*') || Request::is('paymentMethods*') || Request::is('paymentStatuses*')|| Request::is('eProviderPayouts*') ? 'menu-open' : '' }}">

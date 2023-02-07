@@ -53,7 +53,7 @@ class DashboardController extends Controller
         $bookingsCount = $this->bookingRepository->count();
         $membersCount = $this->userRepository->count();
         $eprovidersCount = $this->eProviderRepository->count();
-        $eProviders = $this->eProviderRepository->orderBy('id', 'desc')->limit(4)->get();
+        $eProviders = $this->eProviderRepository->orderBy('id', 'desc')->limit(4);
         $earning = $this->earningRepository->all()->sum('admin_earning');
         $ajaxEarningUrl = route('payments.byMonth', ['api_token' => auth()->user()->api_token]);
         return view('dashboard.index')
