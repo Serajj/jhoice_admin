@@ -1365,5 +1365,7 @@ return [
     'module_installed_successfully' => 'Module Installed Successfully',
     'module_already_installed' => 'Module Already Installed',
     'module_buy' => 'Buy Now',
-    'post_plural'=>'Post'
+    'post_plural'=>'Post',
+    'referral_desc' =>'Referral',
+
 ];

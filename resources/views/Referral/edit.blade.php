@@ -50,11 +50,11 @@
                 </ul>
             </div>
             <div class="card-body">
-                {!! Form::model($referral, ['route' => ['referrals.update', $referral->id], 'method' => 'patch']) !!}
+            {{-- {!! Form::model($referral, ['route' => ['referrals.update', $referral->id], 'method' => 'patch']) !!} --}}
                 <div class="row">
-                    @include('Referrals.fields')
+                    {{-- @include('Referrals.fields') --}}
                 </div>
-                {!! Form::close() !!}
+                {{-- {!! Form::close() !!} --}}
                 <div class="clearfix"></div>
             </div>
         </div>
