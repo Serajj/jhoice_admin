@@ -146,3 +146,4 @@ Route::post('new_notify','API\NotificationAPIController@new_notify');
 
 Route::post('trackclick', 'API\EServiceAPIController@trackClick');
 Route::post('trackBooked', 'API\EServiceAPIController@trackBooked');
+

@@ -12,14 +12,14 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0 text-bold">{{trans('lang.post_plural')}}<small class="mx-3">|</small><small>{{trans('lang.post_desc')}}</small></h1>
+                    <h1 class="m-0 text-bold">{{trans('lang.referral_plural')}}<small class="mx-3">|</small><small>{{trans('lang.referral_desc')}}</small></h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb bg-white float-sm-right rounded-pill px-4 py-2 d-none d-md-flex">
                         <li class="breadcrumb-item"><a href="{{url('/dashboard')}}"><i class="fas fa-tachometer-alt"></i> {{trans('lang.dashboard')}}</a></li>
-                        <li class="breadcrumb-item"><a href="{!! route('post.index') !!}">{{trans('lang.post_plural')}}</a>
+                        <li class="breadcrumb-item"><a href="{!! route('referral.index') !!}">{{trans('lang.referral_plural')}}</a>
                         </li>
-                        <li class="breadcrumb-item active">{{trans('lang.post_edit')}}</li>
+                        <li class="breadcrumb-item active">{{trans('lang.referral_edit')}}</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -34,25 +34,25 @@
         <div class="card shadow-sm">
             <div class="card-header">
                 <ul class="nav nav-tabs d-flex flex-row align-items-start card-header-tabs">
-                    @can('posts.index')
+                    @can('referrals.index')
                         <li class="nav-item">
-                            <a class="nav-link" href="{!! route('posts.index') !!}"><i class="fas fa-list mr-2"></i>{{trans('lang.post_table')}}</a>
+                            <a class="nav-link" href="{!! route('referrals.index') !!}"><i class="fas fa-list mr-2"></i>{{trans('lang.referral_table')}}</a>
                         </li>
                     @endcan
-                    @can('posts.create')
+                    @can('Referrals.create')
                         <li class="nav-item">
-                            <a class="nav-link" href="{!! route('posts.create') !!}"><i class="fas fa-plus mr-2"></i>{{trans('lang.post_create')}}</a>
+                            <a class="nav-link" href="{!! route('referrals.create') !!}"><i class="fas fa-plus mr-2"></i>{{trans('lang.referral_create')}}</a>
                         </li>
                     @endcan
                     <li class="nav-item">
-                        <a class="nav-link active" href="{!! url()->current() !!}"><i class="fas fa-pencil mr-2"></i>{{trans('lang.post_edit')}}</a>
+                        <a class="nav-link active" href="{!! url()->current() !!}"><i class="fas fa-pencil mr-2"></i>{{trans('lang.referral_edit')}}</a>
                     </li>
                 </ul>
             </div>
             <div class="card-body">
-                {!! Form::model($post, ['route' => ['posts.update', $post->id], 'method' => 'patch']) !!}
+                {!! Form::model($referral, ['route' => ['referrals.update', $referral->id], 'method' => 'patch']) !!}
                 <div class="row">
-                    @include('posts.fields')
+                    @include('Referrals.fields')
                 </div>
                 {!! Form::close() !!}
                 <div class="clearfix"></div>

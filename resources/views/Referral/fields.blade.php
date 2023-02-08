@@ -4,32 +4,32 @@
 <div class="d-flex flex-column col-sm-12 col-md-6">
     <!-- Question Field -->
     <div class="form-group align-items-baseline d-flex flex-column flex-md-row">
-        {!! Form::label('question', trans("lang.post_question"), ['class' => 'col-md-3 control-label text-md-right mx-1']) !!}
+        {!! Form::label('question', trans("lang.faq_question"), ['class' => 'col-md-3 control-label text-md-right mx-1']) !!}
         <div class="col-md-9">
             {!! Form::textarea('question', null, ['class' => 'form-control','placeholder'=>
-             trans("lang.post_question_placeholder")  ]) !!}
-            <div class="form-text text-muted">{{ trans("lang.post_question_help") }}</div>
+             trans("lang.faq_question_placeholder")  ]) !!}
+            <div class="form-text text-muted">{{ trans("lang.faq_question_help") }}</div>
         </div>
     </div>
 
     <!-- Answer Field -->
     <div class="form-group align-items-baseline d-flex flex-column flex-md-row">
-        {!! Form::label('answer', trans("lang.post_answer"), ['class' => 'col-md-3 control-label text-md-right mx-1']) !!}
+        {!! Form::label('answer', trans("lang.Referral_answer"), ['class' => 'col-md-3 control-label text-md-right mx-1']) !!}
         <div class="col-md-9">
             {!! Form::textarea('answer', null, ['class' => 'form-control','placeholder'=>
-             trans("lang.post_answer_placeholder")  ]) !!}
-            <div class="form-text text-muted">{{ trans("lang.post_answer_help") }}</div>
+             trans("lang.Referral_answer_placeholder")  ]) !!}
+            <div class="form-text text-muted">{{ trans("lang.Referral_answer_help") }}</div>
         </div>
     </div>
 </div>
 <div class="d-flex flex-column col-sm-12 col-md-6">
 
-    <!-- Faq Category Id Field -->
+    <!-- Referral Category Id Field -->
     <div class="form-group align-items-baseline d-flex flex-column flex-md-row">
-        {!! Form::label('post_category_id', trans("lang.post_post_category_id"),['class' => 'col-md-3 control-label text-md-right mx-1']) !!}
+        {!! Form::label('Referral_category_id', trans("lang.Referral_Referral_category_id"),['class' => 'col-md-3 control-label text-md-right mx-1']) !!}
         <div class="col-md-9">
-            {!! Form::select('post_category_id', $postCategory, null, ['class' => 'select2 form-control']) !!}
-            <div class="form-text text-muted">{{ trans("lang.post_post_category_id_help") }}</div>
+            {!! Form::select('Referral_category_id', $faqCategory, null, ['class' => 'select2 form-control']) !!}
+            <div class="form-text text-muted">{{ trans("lang.Referral_Referral_category_id_help") }}</div>
         </div>
     </div>
 
@@ -44,6 +44,6 @@
 <!-- Submit Field -->
 <div class="form-group col-12 d-flex flex-column flex-md-row justify-content-md-end justify-content-sm-center border-top pt-4">
     <button type="submit" class="btn bg-{{setting('theme_color')}} mx-md-3 my-lg-0 my-xl-0 my-md-0 my-2">
-        <i class="fas fa-save"></i> {{trans('lang.save')}} {{trans('lang.post')}}</button>
-    <a href="{!! route('posts.index') !!}" class="btn btn-default"><i class="fas fa-undo"></i> {{trans('lang.cancel')}}</a>
+        <i class="fas fa-save"></i> {{trans('lang.save')}} {{trans('lang.Referral')}}</button>
+    <a href="{!! route('Referrals.index') !!}" class="btn btn-default"><i class="fas fa-undo"></i> {{trans('lang.cancel')}}</a>
 </div>

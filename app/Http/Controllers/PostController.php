@@ -25,5 +25,42 @@ class PostController extends Controller
         return view('post.index');
     
     }
+    public function edit()
+    {
+        return view('post.edit');
+    
+    }
+    public function create()
+    {
+        return view('post.create');
+    
+    }
+    public function fields()
+    {
+        return view('post.fields');
+    
+    }
+    public function show()
+    {
+        return view('post.show');
+    
+    }
+    public function table()
+    {
+        return view('post.table');
+    
+    }
+    public function data()
+    {
+        return view('post.datatables_actions');
+    
+    }
+    public function show_fields()
+    {
+        return view('post.show_fields');
+    
+    }
+    
+
 }
     

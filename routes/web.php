@@ -216,7 +216,20 @@ Route::get('uploads/clear-all', 'UploadController@clearAll');
 
 
    // post routes
-   Route::get('post','PostController@index')->name('post');
-   Route::get('edit','PostController@edit')->name('edit');
+   Route::get('post','PostController@index')->name('post.index');
+   Route::get('post/edit','PostController@edit')->name('post.edit');
+   Route::get('post/create','PostController@create')->name('post.create');
+   Route::get('post/show','PostController@show')->name('post.show');
+   Route::get('post/show_fields','PostController@show_fields')->name('post.show_fields');
+   Route::get('post/table','PostController@table')->name('post.table');
+   Route::get('post/datatables_actions','PostController@datatables_actions')->name('post.datatables_actions');
 
+//referral
+   Route::get('referral','ReferralController@index')->name('referral.index');
+   Route::get('referral/edit','ReferralController@edit')->name('referral.edit');
+   Route::get('referral/create','ReferralController@create')->name('referral.create');
+   Route::get('referral/show','ReferralController@show')->name('referral.show');
+   Route::get('referral/show_fields','ReferralController@show_fields')->name('referral.show_fields');
+   Route::get('referral/table','ReferralController@table')->name('referral.table');
+   Route::get('referral/datatables_actions','ReferralController@datatables_actions')->name('referral.datatables_actions');
 });

@@ -210,25 +210,49 @@
         </ul>
     </li>
 @endcan
-<li class="nav-item {{ Request::is('faqCategories*') || Request::is('faqs*') ? 'menu-open' : '' }}">
-    <a href="#" class="nav-link {{ Request::is('faqs*') || Request::is('faqCategories*') ? 'active' : '' }}"> @if($icons)
-            <i class="nav-icon fas fa-question-circle"></i>@endif
+<li class="nav-item {{ Request::is('PostCategories*') || Request::is('Post*') ? 'menu-open' : '' }}">
+    <a href="#" class="nav-link {{ Request::is('Post*') || Request::is('PostCategories*') ? 'active' : '' }}"> @if($icons)
+            <i class="nav-icon fas fa-address-card"></i>@endif
         <p>{{trans('Post')}} <i class="right fas fa-angle-left"></i>
         </p>
     </a>
     <ul class="nav nav-treeview">
-        @can('faqCategories.index')
+        @can('PostCategories.index')
             <li class="nav-item">
-                <a class="nav-link {{ Request::is('faqCategories*') ? 'active' : '' }}" href="{!! route('faqCategories.index') !!}">@if($icons)
-                        <i class="nav-icon fas fa-folder-open"></i>@endif<p>{{trans('lang.faq_category_plural')}}</p></a>
+                <a class="nav-link {{ Request::is('PostCategories*') ? 'active' : '' }}" href="{!! route('PostCategories.index') !!}">@if($icons)
+                        <i class="nav-icon fas fa-folder-open"></i>@endif<p>{{trans('lang.Post_category_plural')}}</p></a>
             </li>
         @endcan
 
-        @can('faqs.index')
+        @can('Posts.index')
             <li class="nav-item">
-                <a class="nav-link {{ Request::is('faqs*') ? 'active' : '' }}" href="{!! route('faqs.index') !!}">@if($icons)
+                <a class="nav-link {{ Request::is('Post*') ? 'active' : '' }}" href="{!! route('Posts.index') !!}">@if($icons)
                         <i class="nav-icon fas fa-life-ring"></i>@endif
-                    <p>{{trans('lang.faq_plural')}}</p></a>
+                    <p>{{trans('lang.Post_plural')}}</p></a>
+            </li>
+        @endcan
+    </ul>
+</li>
+
+<li class="nav-item {{ Request::is('ReferralCategories*') || Request::is('Referral*') ? 'menu-open' : '' }}">
+    <a href="#" class="nav-link {{ Request::is('Referral*') || Request::is('ReferralCategories*') ? 'active' : '' }}"> @if($icons)
+            <i class="nav-icon fas fa-snowflake"></i>@endif
+        <p>{{trans('Referral')}} <i class="right fas fa-angle-left"></i>
+        </p>
+    </a>
+    <ul class="nav nav-treeview">
+        @can('ReferralCategories.index')
+            <li class="nav-item">
+                <a class="nav-link {{ Request::is('ReferralCategories*') ? 'active' : '' }}" href="{!! route('ReferralCategories.index') !!}">@if($icons)
+                        <i class="nav-icon fas fa-folder-open"></i>@endif<p>{{trans('lang.Referral_category_plural')}}</p></a>
+            </li>
+        @endcan
+
+        @can('Referrals.index')
+            <li class="nav-item">
+                <a class="nav-link {{ Request::is('Referral*') ? 'active' : '' }}" href="{!! route('Referrals.index') !!}">@if($icons)
+                        <i class="nav-icon fas fa-life-ring"></i>@endif
+                    <p>{{trans('lang.Referral_plural')}}</p></a>
             </li>
         @endcan
     </ul>
