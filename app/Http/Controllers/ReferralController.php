@@ -23,7 +23,7 @@ class ReferralController extends Controller
         return view('referral.create');
     
     }
-    public function fields()
+    public function field()
     {
         return view('referral.fields');
     

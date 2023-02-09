@@ -21,7 +21,7 @@
                 <div class="col-sm-6">
                     <ol class="breadcrumb bg-white float-sm-right rounded-pill px-4 py-2 d-none d-md-flex">
                         <li class="breadcrumb-item"><a href="{{url('/dashboard')}}"><i class="fas fa-tachometer-alt"></i> {{trans('lang.dashboard')}}</a></li>
-                        <li class="breadcrumb-item"><a href="{!! route('posts.index') !!}">{{trans('lang.post_plural')}}</a>
+                        {{-- <li class="breadcrumb-item"><a href="{!! route('posts.index') !!}">{{trans('lang.post_plural')}}</a> --}}
                         </li>
                         <li class="breadcrumb-item active">{{trans('lang.post_create')}}</li>
                     </ol>
@@ -49,11 +49,11 @@
                 </ul>
             </div>
             <div class="card-body">
-                {!! Form::open(['route' => 'posts.store']) !!}
+                {{-- {!! Form::open(['route' => 'posts.store']) !!} --}}
                 <div class="row">
-                    @include('posts.fields')
+                    {{-- @include('posts.fields') --}}
                 </div>
-                {!! Form::close() !!}
+                {{-- {!! Form::close() !!} --}}
                 <div class="clearfix"></div>
             </div>
         </div>

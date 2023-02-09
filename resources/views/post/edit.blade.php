@@ -50,11 +50,11 @@
                 </ul>
             </div>
             <div class="card-body">
-                {!! Form::model($post, ['route' => ['posts.update', $post->id], 'method' => 'patch']) !!}
+                {{-- {!! Form::model($post, ['route' => ['posts.update', $post->id], 'method' => 'patch']) !!} --}}
                 <div class="row">
-                    @include('posts.fields')
+                    {{-- @include('posts.fields') --}}
                 </div>
-                {!! Form::close() !!}
+                {{-- {!! Form::close() !!} --}}
                 <div class="clearfix"></div>
             </div>
         </div>

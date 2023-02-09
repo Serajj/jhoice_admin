@@ -11,7 +11,7 @@
                 <div class="col-sm-6">
                     <ol class="breadcrumb bg-white float-sm-right rounded-pill px-4 py-2 d-none d-md-flex">
                         <li class="breadcrumb-item"><a href="{{url('/')}}"><i class="fas fa-tachometer-alt"></i> {{trans('lang.dashboard')}}</a></li>
-                        <li class="breadcrumb-itema ctive"><a href="{!! route('Referrals.index') !!}">{{trans('lang.Referral_plural')}}</a>
+                        {{-- <li class="breadcrumb-itema ctive"><a href="{!! route('Referrals.index') !!}">{{trans('lang.Referral_plural')}}</a> --}}
                         </li>
                     </ol>
                 </div><!-- /.col -->
@@ -24,20 +24,20 @@
             <div class="card-header">
                 <ul class="nav nav-tabs d-flex flex-row align-items-start card-header-tabs">
                     <li class="nav-item">
-                        <a class="nav-link" href="{!! route('Referrals.index') !!}"><i class="fas fa-list mr-2"></i>{{trans('lang.Referral_table')}}</a>
+                        {{-- <a class="nav-link" href="{!! route('Referrals.index') !!}"><i class="fas fa-list mr-2"></i>{{trans('lang.Referral_table')}}</a> --}}
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="{!! route('Referrals.create') !!}"><i class="fas fa-plus mr-2"></i>{{trans('lang.Referral_create')}}</a>
+                        {{-- <a class="nav-link active" href="{!! route('Referrals.create') !!}"><i class="fas fa-plus mr-2"></i>{{trans('lang.Referral_create')}}</a> --}}
                     </li>
                 </ul>
             </div>
             <div class="card-body">
                 <div class="row">
-                @include('Referrals.show_fields')
+                {{-- @include('Referrals.show_fields') --}}
 
                 <!-- Back Field -->
                     <div class="form-group col-12 d-flex flex-column flex-md-row justify-content-md-end justify-content-sm-center border-top pt-4">
-                        <a href="{!! route('Referrals.index') !!}" class="btn btn-default"><i class="fas fa-undo"></i> {{trans('lang.back')}}</a>
+                        {{-- <a href="{!! route('Referrals.index') !!}" class="btn btn-default"><i class="fas fa-undo"></i> {{trans('lang.back')}}</a> --}}
                     </div>
                 </div>
                 <div class="clearfix"></div>

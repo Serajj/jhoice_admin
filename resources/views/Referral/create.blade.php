@@ -21,7 +21,7 @@
                 <div class="col-sm-6">
                     <ol class="breadcrumb bg-white float-sm-right rounded-pill px-4 py-2 d-none d-md-flex">
                         <li class="breadcrumb-item"><a href="{{url('/dashboard')}}"><i class="fas fa-tachometer-alt"></i> {{trans('lang.dashboard')}}</a></li>
-                        <li class="breadcrumb-item"><a href="{!! route('Referrals.index') !!}">{{trans('lang.Referral_plural')}}</a>
+                        {{-- <li class="breadcrumb-item"><a href="{!! route('Referrals.index') !!}">{{trans('lang.Referral_plural')}}</a> --}}
                         </li>
                         <li class="breadcrumb-item active">{{trans('lang.Referral_create')}}</li>
                     </ol>
@@ -49,16 +49,16 @@
                 </ul>
             </div>
             <div class="card-body">
-                {!! Form::open(['route' => 'Referrals.store']) !!}
+                {{-- {!! Form::open(['route' => 'Referrals.store']) !!} --}}
                 <div class="row">
-                    @include('Referrals.fields')
+                    {{-- @include('Referrals.fields') --}}
                 </div>
-                {!! Form::close() !!}
+                {{-- {!! Form::close() !!} --}}
                 <div class="clearfix"></div>
             </div>
         </div>
     </div>
-    @include('layouts.media_modal')
+    {{-- @include('layouts.media_modal') --}}
 @endsection
 @push('scripts_lib')
     <!-- select2 -->

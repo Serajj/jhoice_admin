@@ -1366,6 +1366,11 @@ return [
     'module_already_installed' => 'Module Already Installed',
     'module_buy' => 'Buy Now',
     'post_plural'=>'Post',
+    'post_desc'=> 'Post is available',
     'referral_desc' =>'Referral',
+    'referral_plural'=> 'Referral connect',
+    'Referral_desc' => 'Refferal okay',
+    'Referral_plural'=> 'Referral',
+    
 
 ];
